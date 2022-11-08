@@ -1,0 +1,2745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>761</width>
+    <height>562</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Hasil Evaluasi (Cross Validation)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>211</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="title">
+        <string>Kinerja rata-rata</string>
+       </property>
+       <widget class="QWidget" name="gridLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>181</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinAndMaxSize</enum>
+         </property>
+         <item row="0" column="1">
+          <widget class="QLabel" name="accuracy_rata">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0%</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Accuracy</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Recall</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Precision</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="fmeasure_rata">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>F-Measure</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="recall_rata">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="precission_rata">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>741</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>9</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>cv-1</string>
+     </attribute>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetFixedSize</enum>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox_29">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Kinerja</string>
+          </property>
+          <widget class="QWidget" name="gridLayoutWidget_15">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>181</width>
+             <height>171</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_16">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinAndMaxSize</enum>
+            </property>
+            <item row="0" column="1">
+             <widget class="QLabel" name="accuracy_cv1">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>0%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_97">
+              <property name="font">
+               <font>
+                <pointsize>7</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Accuracy</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_98">
+              <property name="font">
+               <font>
+                <pointsize>7</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Recall</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_99">
+              <property name="font">
+               <font>
+                <pointsize>7</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Precision</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="fmeasure_cv1">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_100">
+              <property name="font">
+               <font>
+                <pointsize>7</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>F-Measure</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="recall_cv1">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="precission_cv1">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_30">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Confusion Matrix</string>
+          </property>
+          <widget class="QTableWidget" name="table_confusion_cv1">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>70</y>
+             <width>271</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <row>
+            <property name="text">
+             <string>Positif</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Negatif</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Positif</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Negatif</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="label_101">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>50</y>
+             <width>71</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Terprediksi</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_102">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Fakta</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>cv-2</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_4">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv2">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_28">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_30">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_31">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv2">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_34">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv2">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv2">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv2">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_35">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_36">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>cv-3</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_11">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_6">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv3">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_43">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_44">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_45">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv3">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_46">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv3">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv3">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_12">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv3">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_47">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_48">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>cv-4</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_13">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_7">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv4">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_49">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_50">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_51">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv4">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_52">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv4">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv4">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_14">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv4">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_53">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_54">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>cv-5</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_17">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_9">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv5">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_61">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_62">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_63">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv5">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_64">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv5">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv5">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_18">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv5">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_65">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_66">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>cv-6</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_19">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_10">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv6">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_67">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_68">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_69">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv6">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_70">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv6">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv6">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_20">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv6">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_71">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_72">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_7">
+     <attribute name="title">
+      <string>cv-7</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_21">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_11">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_12">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv7">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_73">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_74">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_75">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv7">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_76">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv7">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv7">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_22">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv7">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_77">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_78">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_8">
+     <attribute name="title">
+      <string>cv-8</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_23">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_12">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_13">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv8">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_79">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_80">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_81">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv8">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_82">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv8">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv8">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_24">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv8">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_83">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_84">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_9">
+     <attribute name="title">
+      <string>cv-9</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_25">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_13">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv9">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_85">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_86">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_87">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv9">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_88">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv9">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv9">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_26">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv9">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_89">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_90">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_10">
+     <attribute name="title">
+      <string>cv-10</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_27">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Kinerja</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget_14">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>181</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLabel" name="accuracy_cv10">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_91">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Accuracy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_92">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Recall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_93">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Precision</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="fmeasure_cv10">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_94">
+             <property name="font">
+              <font>
+               <pointsize>7</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>F-Measure</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="recall_cv10">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="precission_cv10">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_28">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Confusion Matrix</string>
+         </property>
+         <widget class="QTableWidget" name="table_confusion_cv10">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>271</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <row>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Positif</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Negatif</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_95">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>50</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Terprediksi</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_96">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fakta</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>731</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Hasil Evaluasi</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_algoritma">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Algoritma ......</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>761</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
